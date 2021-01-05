@@ -5,7 +5,7 @@
 
 일단 기초적인 코드를 따라가며 공부를 했다.
 
-<!DOCTYPE html>
+  <!DOCTYPE html>
 문서처음에 이 언어는 html임을 알려주는 선언
 
 <link href="style.css" rel="stylesheet" type="text/css" />
