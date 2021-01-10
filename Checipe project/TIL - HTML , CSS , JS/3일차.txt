@@ -82,3 +82,50 @@ event 에 상관없이 전자는 fuction이 호출되고 후자는 event가 있�
 ex) 0 == falese -> true
 0 === false -> false
 
+우리는 자바스크립트에서 html의 class name을 바꿈으로써 함수의 기능을 줄 수 있다.
+아래는 classname을 바꿈으로써 css적용 또한 바뀌게해서 색을 바꿔주는 예의 코드이다.
+
+ <h1 id="title" class="btn">This works!</h1> - html 코드
+ title id를 가졌으며 class로 현재 btn을 가졌다.
+ 
+ 
+ JS코드
+ 
+ const title=document.querySelector("#title"); // title id를 가진 첫번째 element를 title로 const선언
+
+const CLICKED_CLASS = "clicked"; // clicked로 변화를 주기위한 변수 선언
+
+// 클릭이 있었을 때 실행
+function handleClick(){ 
+  const hasClass = title.classList.contains(CLICKED_CLASS); // 클릭했을 때 클래스가 clicked인지 판단을 위한 변수 선언
+
+  if(!hasClass){ // 클래스가 clicked가 아니면
+    title.classList.add(CLICKED_CLASS); // 클래스에 clicked를 추가하여 css값으로 변하게 해줌 아래 clicked css참고할것
+    
+  }else { // 이미 클래스가 clicked인 경우 clicked를 클래스에서 뺌으로써 css적용을 막음
+    title.classList.remove(CLICKED_CLASS);
+  }
+}
+
+// 클릭 event를 위한 함수 선언
+function init()
+{
+title.addEventListener("click", handleClick ); // title의 클릭 이벤트처리
+
+}
+init();
+
+
+CSS 파일 -
+
+.btn{
+  cursor: pointer;
+}
+
+.clicked{ // 클래스가 clicked면 색을 red로 바꿈 clicked가 아닌 클래스면 이를 적용하지 않는다는 소리
+이를 이용해서 title의 색을 계속 바꿔나간다.
+  color: red;
+}
+
+
+이처럼 html , css , javascript가 셋이서 함께 작용할 수 있는 간단한 방법을 알아보았다. 이전에는 정말 세가지가 함께 함수로 움직이고 변수로 움직이는게 막막했는데 조금씩 이해가 가기 시작했다. 곧 백엔드와 프론트엔드를 연결할 수 있을것 같다. 빨리 둘을 연결해서 원하는 웹페이지를 마음껏 만들어나가고 싶다.
