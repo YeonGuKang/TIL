@@ -354,3 +354,16 @@ Food.propTypes = {
   picture: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired
 };
+
+아주 많이쓰이는 ES6의 화살표함수에 대해서 잠깐 알아보자
+아래는 화살표함수의 예시 코드이다.
+
+// 이 문장은 배열을 반환함: [8, 6, 7, 9]
+elements.map(function(element) {
+  return element.length;
+});
+
+// 위의 일반적인 함수 표현은 아래 화살표 함수로 쓸 수 있다.
+elements.map((element) => {
+  return element.length;
+}); // [8, 6, 7, 9]
