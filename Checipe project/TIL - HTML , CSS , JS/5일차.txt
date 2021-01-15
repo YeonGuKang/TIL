@@ -55,3 +55,11 @@ Router가 호출이 되어 Loginform.js를 보여준다는 점이다. 이점은 
                                 </Link>
                                
                               </div>
+
+
+그리고 react에 기본으로 구성되었는 필수요소들이 존재한다. 현재 안것으로는
+index.js , index.html , App,js 이 세개는 필수로 존재해야하는 것으로 보인다. 파일들의
+이름을 바꿔보고 기본 render위치를 바꿔보는등 해볼때 오류가 생긴 파일들이다.
+index.html은 무조건 여기서 html이 로드된다. 따라서 VDOM은 무조건 index.html에서 이루어진다.
+이와 마찬가지로 index.js 이것도 무조건 여기서 html VDOM이 여기서 실행된다. 그리고 이건 확실하진 않지만
+reder역시 무조건 App.js로 넘겨줘야하는것으로 보인다. 따라서 이 셋은 필수요소로 현재 확인된다.
