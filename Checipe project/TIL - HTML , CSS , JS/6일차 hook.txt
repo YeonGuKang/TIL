@@ -1,10 +1,12 @@
 6일차 - AWESOME한 react와 이를 더 AWESOME하게 만들어주는 HOOK에 대해 공부하다
 
-react에서 fuction을 component라고 부른다*********
+react에서 function을 component라고 부른다*********
 
 리액트 컴포넌트가 Instance로 생성되어 DOM tree에 삽입되어 브라우저 상에 나타나는것을 마운트라고 합니다.
 componentDidMount
 컴포넌트가 DOM tree에 삽입된 직후에 호출되는 메서드 입니다. 외부에서 데이터를 불러와야 할때 사용하기 적절합니다.
+
+이때 사용하는것이 useEffenct()
 
 
 리액트 컴포넌트가 업데이트되는것을 업데이트라고 합니다. 
