@@ -156,3 +156,38 @@
               ))}
             </div>
             
+            
+            
+            추가로 ES6로 implicit return을 하는 법과 예시를 아래 블로그에서 참고해서 공부했다. 
+            https://velog.io/@nowhhk/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-es6-arrow-function-implicit-return
+            
+            implicit return
+    name이라는 배열에 "😍"를 더한 새로운 배열을 만드는 함수를 작성해본다면,
+    기존 방식으로는 이렇게 작성할 수 있다.
+
+const names = ["hk", "js"]
+
+const hearts = names.map(function(item) {
+  return item + "😍"
+});
+ES6의 arrow function으로 작성한다면,
+
+const hearts = names.map(item => item + "😍"
+item이라는 argument를 가지고 implicit return하는 함수이다.
+implicit return이란 같은 줄에 뭘 적던지 간에 return된다는 뜻이다.
+
+console.log 해보면 새로운 배열이 생성된다.
+
+[ 'hk😍', 'js😍' ]
+const hearts = names.map((item,idx) => {
+console.log(idx);
+return item + "😍"
+});
+함수가 복잡해진다면 function의 body를 만들기 위해 {}를 추가하게 될 것이고,
+{} 를 추가하는 순간 implicit return은 사라진다.
+위에서 return을 지운다면 이 함수는 아무것도 리턴하지않는다.
+
+0
+1
+[ undefined, undefined ]
+            
