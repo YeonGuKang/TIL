@@ -1,6 +1,6 @@
-6일차 - AWESOME한 react와 이를 더 AWESOME하게 만들어주는 HOOK에 대해 공부하다
+# 6일차 - AWESOME한 react와 이를 더 AWESOME하게 만들어주는 HOOK에 대해 공부하다
 
-react에서 function을 component라고 부른다*********
+**react에서 function을 component라고 부른다**
 
 리액트 컴포넌트가 Instance로 생성되어 DOM tree에 삽입되어 브라우저 상에 나타나는것을 마운트라고 합니다.
 componentDidMount
@@ -32,6 +32,7 @@ useState에 대해서 먼저 공부하도록 하겠다.
 setEmail이라는 함수로 email의 state를 손쉽게 변경할수있다. useState는 Array형태로
 처음 인자는 state이고 그 다음인자는 그 state의 값을 변경해주는 함수이다.
 
+```
 const Auth = () => {
 
 	// email의 state를 처음에 ""으로 설정
@@ -39,6 +40,7 @@ const Auth = () => {
     const [password, setPassword] = useState("");
 
 };
+```
 
 useEffect는 모든 변화를 감지하고 그 변화에 맞춰 실행하는 함수이다.
 따라서 이를 잘 사용하면 언제 , 무엇이 변경됐을때 어떻게 실행할지를 모두 결정할 수 있는
@@ -54,7 +56,7 @@ useEffect(sayHello, [number]);
 DOM을 사용하는듯이 html의 element를 변경할수있는 강력한 함수이다.
 아래예시를 보여주겠다. getElementByid() 라고 생각하면 편하다.
 
-
+```
 const potato = useRef();
 // ref를 이용하여 input tag에 접근하여 실행해준 모습
   setTimeout(() => potato.current.focus(), 5000);
@@ -63,3 +65,4 @@ const potato = useRef();
 // ref를 이용하여 이 input을 밖에서 변경해주고 사용할 수 있다.
     <input ref={potato} placeholder="name" />
     </div>
+```
